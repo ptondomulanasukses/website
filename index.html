@@ -269,34 +269,40 @@
             background: var(--putih);
             box-shadow: 0 4px 10px rgba(0,0,0,0.02);
             position: relative;
-        }
-
-        .cover-visual {
-            height: 260px;
-            background-color: var(--biru-tua);
-            color: var(--emas);
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 25px;
-            font-weight: 700;
-            font-size: 17px;
-            border-bottom: 5px solid var(--emas);
         }
 
-        .cover-visual span {
-            color: var(--putih);
-            font-size: 12px;
-            font-weight: 400;
-            margin-top: 10px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        /* CSS BARU UNTUK COVER GAMBAR DAN KESERAGAMAN LAYOUT */
+        .cover-container {
+            height: 380px;
+            background-color: #ECEFF1; /* Latar belakang netral pelindung aspek rasio */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            overflow: hidden;
+            border-bottom: 5px solid var(--emas);
+            padding: 10px;
+        }
+
+        .cover-image {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            display: block;
         }
 
         .buku-info {
             padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .buku-info-text {
+            margin-bottom: 15px;
         }
 
         .buku-kategori {
@@ -311,12 +317,14 @@
         .buku-info h3 {
             font-size: 17px;
             color: var(--biru-tua);
-            margin-bottom: 12px;
+            margin-bottom: 0;
             font-weight: 600;
+            line-height: 1.4;
         }
 
         /* BADGE STATUS */
         .badge-status {
+            align-self: flex-start;
             display: inline-block;
             background-color: var(--emas);
             color: var(--biru-tua);
@@ -452,7 +460,7 @@
             <div class="grid-fokus">
                 <div class="card-fokus">
                     <h3>Penerbitan Buku</h3>
-                    <p>Memproduksi literasi cetak berupa buku teks, buku referensi akademis, dan karya non-fiksi umum yang berbobot.</p>
+                    <p>Memproduksi literasi cetak berupa buku teks, buku referensi akademis, and karya non-fiksi umum yang berbobot.</p>
                 </div>
                 <div class="card-fokus">
                     <h3>Workbook & Buku Kerja</h3>
@@ -546,7 +554,7 @@
                             <td>58110 – Penerbitan Buku</td>
                         </tr>
                         <tr>
-                            <td><strong>Penanggung Jacob</strong></td>
+                            <td><strong>Penanggung Jawab</strong></td>
                             <td>Ridwan, S.Pd.</td>
                         </tr>
                         <tr>
@@ -567,57 +575,62 @@
             
             <div class="grid-publikasi">
                 <div class="card-buku">
-                    <div class="cover-visual">
-                        Ayo Mewarnai Hewan Lucu
-                        <span>Buku Aktivitas Anak</span>
+                    <div class="cover-container">
+                        <img src="images/ayo-mewarnai-hewan-lucu.png" alt="Cover Buku Ayo Mewarnai Hewan Lucu" class="cover-image">
                     </div>
                     <div class="buku-info">
-                        <div class="buku-kategori">Kategori: Buku Aktivitas Anak</div>
-                        <h3>Ayo Mewarnai Hewan Lucu</h3>
+                        <div class="buku-info-text">
+                            <div class="buku-kategori">Kategori: Buku Aktivitas Anak</div>
+                            <h3>Ayo Mewarnai Hewan Lucu</h3>
+                        </div>
                         <div class="badge-status">Dalam Penyusunan</div>
                     </div>
                 </div>
                 <div class="card-buku">
-                    <div class="cover-visual">
-                        Seri Asmaul Husna untuk Anak
-                        <span>Pendidikan Islam Anak</span>
+                    <div class="cover-container">
+                        <img src="images/buku-aktivitas-anak-muslim.png" alt="Cover Buku Buku Aktivitas Anak Muslim" class="cover-image">
                     </div>
                     <div class="buku-info">
-                        <div class="buku-kategori">Kategori: Pendidikan Islam Anak</div>
-                        <h3>Seri Asmaul Husna untuk Anak</h3>
+                        <div class="buku-info-text">
+                            <div class="buku-kategori">Kategori: Activity Book</div>
+                            <h3>Buku Aktivitas Anak Muslim</h3>
+                        </div>
                         <div class="badge-status">Dalam Penyusunan</div>
                     </div>
                 </div>
                 <div class="card-buku">
-                    <div class="cover-visual">
-                        Buku Aktivitas Anak Muslim
-                        <span>Activity Book</span>
+                    <div class="cover-container">
+                        <img src="images/seri-asmaul-husna-untuk-anak.png" alt="Cover Buku Seri Asmaul Husna untuk Anak" class="cover-image">
                     </div>
                     <div class="buku-info">
-                        <div class="buku-kategori">Kategori: Activity Book</div>
-                        <h3>Buku Aktivitas Anak Muslim</h3>
+                        <div class="buku-info-text">
+                            <div class="buku-kategori">Kategori: Pendidikan Islam Anak</div>
+                            <h3>Seri Asmaul Husna untuk Anak</h3>
+                        </div>
                         <div class="badge-status">Dalam Penyusunan</div>
                     </div>
                 </div>
                 <div class="card-buku">
-                    <div class="cover-visual">
-                        Worksheet Edukatif Anak
-                        <span>Media Pembelajaran</span>
+                    <div class="cover-container">
+                        <img src="images/seri-literasi-anak-indonesia.png" alt="Cover Buku Seri Literasi Anak Indonesia" class="cover-image">
                     </div>
                     <div class="buku-info">
-                        <div class="buku-kategori">Kategori: Media Pembelajaran</div>
-                        <h3>Worksheet Edukatif Anak</h3>
+                        <div class="buku-info-text">
+                            <div class="buku-kategori">Kategori: Buku Anak</div>
+                            <h3>Seri Literasi Anak Indonesia</h3>
+                        </div>
                         <div class="badge-status">Dalam Penyusunan</div>
                     </div>
                 </div>
                 <div class="card-buku">
-                    <div class="cover-visual">
-                        Seri Literasi Anak Indonesia
-                        <span>Buku Anak</span>
+                    <div class="cover-container">
+                        <img src="images/worksheet-edukatif-anak.png" alt="Cover Worksheet Edukatif Anak" class="cover-image">
                     </div>
                     <div class="buku-info">
-                        <div class="buku-kategori">Kategori: Buku Anak</div>
-                        <h3>Seri Literasi Anak Indonesia</h3>
+                        <div class="buku-info-text">
+                            <div class="buku-kategori">Kategori: Media Pembelajaran</div>
+                            <h3>Worksheet Edukatif Anak</h3>
+                        </div>
                         <div class="badge-status">Dalam Penyusunan</div>
                     </div>
                 </div>
