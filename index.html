@@ -255,6 +255,54 @@
             margin-top: 15px;
         }
 
+        /* CSS TAMBAHAN: PRODUK DIGITAL SECTION */
+        .produk-digital-content {
+            text-align: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .produk-digital-link {
+            display: block;
+            max-width: 100%;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .produk-digital-link:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .produk-digital-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .btn-lynk {
+            display: inline-block;
+            background-color: var(--emas);
+            color: var(--biru-tua);
+            text-decoration: none;
+            padding: 14px 36px;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-lynk:hover {
+            background-color: #C5A028;
+            transform: scale(1.02);
+        }
+
         /* KATALOG PUBLIKASI */
         .grid-publikasi {
             display: grid;
@@ -362,22 +410,27 @@
         }
 
         .kontak-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 50px;
-            margin-top: 40px;
+            max-width: 800px;
+            margin: 40px auto 0 auto;
         }
 
         .kontak-detail h3 {
             color: var(--emas);
             margin-bottom: 25px;
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 600;
+            text-align: center;
         }
 
         .kontak-item {
             margin-bottom: 20px;
-            font-size: 15px;
+            font-size: 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 12px;
+        }
+
+        .kontak-item:last-child {
+            border-bottom: none;
         }
 
         .kontak-item strong {
@@ -387,20 +440,16 @@
             font-weight: 600;
         }
 
-        .peta-lokasi {
-            background: #1A365D;
-            border: 1px solid #2D4A77;
-            height: 280px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            border-radius: 6px;
-            color: #E2E8F0;
-            font-size: 15px;
-            text-align: center;
-            padding: 20px;
-            line-height: 1.8;
+        /* STYLING KHUSUS TAUTAN DI KONTAK */
+        .kontak-item a {
+            color: var(--putih);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .kontak-item a:hover {
+            color: var(--emas);
+            text-decoration: underline;
         }
 
         /* FOOTER */
@@ -432,6 +481,7 @@
 </head>
 <body>
 
+    <!-- NAVIGASI & HEADER -->
     <header>
         <div class="nav-container">
             <div class="logo">
@@ -443,6 +493,7 @@
                     <li><a href="#beranda">Beranda</a></li>
                     <li><a href="#profil">Profil Perusahaan</a></li>
                     <li><a href="#legalitas">Legalitas</a></li>
+                    <li><a href="#produk-digital">Produk Digital</a></li>
                     <li><a href="#publikasi">Katalog Terbitan</a></li>
                     <li><a href="#kontak">Kontak</a></li>
                 </ul>
@@ -450,6 +501,7 @@
         </div>
     </header>
 
+    <!-- 1. BERANDA / HERO SECTION -->
     <section id="beranda">
         <div class="hero-content">
             <h2>Penerbitan Buku, Media Pembelajaran, dan Produk Digital Edukatif</h2>
@@ -457,6 +509,7 @@
         </div>
     </section>
 
+    <!-- FOKUS PRODUKSI -->
     <section>
         <div class="container">
             <h2 class="section-title">Fokus Produksi & Penerbitan</h2>
@@ -491,6 +544,7 @@
         </div>
     </section>
 
+    <!-- 2. PROFIL PERUSAHAAN -->
     <section id="profil">
         <div class="container">
             <h2 class="section-title">Profil Perusahaan</h2>
@@ -498,11 +552,12 @@
             
             <div class="profil-content">
                 <div class="profil-text">
-                    <p><strong>PT ONDO MULANA SUKSES</strong> berdiri sebagai badan usaha berbadan hukum yang focus pada sektor penerbitan buku, pengembangan produk edukatif, serta penyediaan media pembelajaran interaktif. Demi mewujudkan visi literasi yang terarah dan berdaya saing nasional, pengelolaan seluruh portofolio terbitan serta kurasi naskah diintegrasikan di bawah divisi khusus dengan imprint resmi <strong>ONDO Publishing</strong>.</p>
+                    <p><strong>PT ONDO MULANA SUKSES</strong> berdiri sebagai badan usaha berbadan hukum yang fokus pada sektor penerbitan buku, pengembangan produk edukatif, serta penyediaan media pembelajaran interaktif. Demi mewujudkan visi literasi yang terarah dan berdaya saing nasional, pengelolaan seluruh portofolio terbitan serta kurasi naskah diintegrasikan di bawah divisi khusus dengan imprint resmi <strong>ONDO Publishing</strong>.</p>
                     
                     <p>Kami menerapkan standar penyuntingan internal yang ketat guna memastikan setiap karya memenuhi parameter keilmuan yang valid sekaligus memiliki penyajian visual yang komunikatif. Melalui pendekatan profesional ini, PT ONDO MULANA SUKSES menempatkan diri sebagai mitra strategis tepercaya bagi institusi pendidikan, tenaga pendidik, dan masyarakat luas dalam mengakselerasi budaya membaca di Indonesia.</p>
                 </div>
 
+                <!-- VISI & MISI PERUSAHAAN -->
                 <div class="visi-misi-section">
                     <h4>Visi</h4>
                     <p>Menjadi perusahaan penerbitan dan pengembang media pembelajaran yang inovatif, berkualitas, dan berkontribusi bagi kemajuan pendidikan Indonesia.</p>
@@ -520,6 +575,7 @@
         </div>
     </section>
 
+    <!-- 3. LEGALITAS -->
     <section id="legalitas">
         <div class="container">
             <h2 class="section-title">Legalitas Instansi</h2>
@@ -603,12 +659,29 @@
         </div>
     </section>
 
+    <!-- SECTION BARU: PRODUK DIGITAL & LAYANAN ONLINE -->
+    <section id="produk-digital">
+        <div class="container">
+            <h2 class="section-title">Produk Digital & Layanan Online</h2>
+            <p class="section-desc">PT ONDO MULANA SUKSES juga mengembangkan berbagai produk digital, media pembelajaran, template, layanan kreatif, undangan digital, administrasi guru, prompt AI, dan solusi digital lainnya yang tersedia melalui platform Lynk.</p>
+            
+            <div class="produk-digital-content">
+                <a href="https://lynk.id/ridwanhumble" target="_blank" rel="noopener noreferrer" class="produk-digital-link">
+                    <img src="images/produk-digital-dan-layanan-online.png" alt="Produk Digital dan Layanan Online PT ONDO MULANA SUKSES" class="produk-digital-img">
+                </a>
+                <a href="https://lynk.id/ridwanhumble" target="_blank" rel="noopener noreferrer" class="btn-lynk">Kunjungi Lynk</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. KATALOG TERBITAN (PUBLIKASI) -->
     <section id="publikasi" style="background-color: var(--abu-terang);">
         <div class="container">
             <h2 class="section-title">Katalog Terbitan</h2>
             <p class="section-desc">Daftar judul publikasi buku beserta produk edukatif resmi PT ONDO MULANA SUKSES yang dapat diakses oleh publik.</p>
             
             <div class="grid-publikasi">
+                <!-- Buku 1 -->
                 <div class="card-buku">
                     <div class="cover-container">
                         <img src="images/ayo-mewarnai-hewan-lucu.png" alt="Cover Buku Ayo Mewarnai Hewan Lucu" class="cover-image">
@@ -621,6 +694,7 @@
                         <div class="badge-status">Dalam Proses Pengembangan</div>
                     </div>
                 </div>
+                <!-- Buku 2 -->
                 <div class="card-buku">
                     <div class="cover-container">
                         <img src="images/buku-aktivitas-anak-muslim.png" alt="Cover Buku Buku Aktivitas Anak Muslim" class="cover-image">
@@ -633,6 +707,7 @@
                         <div class="badge-status">Dalam Proses Pengembangan</div>
                     </div>
                 </div>
+                <!-- Buku 3 -->
                 <div class="card-buku">
                     <div class="cover-container">
                         <img src="images/seri-asmaul-husna-untuk-anak.png" alt="Cover Buku Seri Asmaul Husna untuk Anak" class="cover-image">
@@ -645,6 +720,7 @@
                         <div class="badge-status">Dalam Proses Pengembangan</div>
                     </div>
                 </div>
+                <!-- Buku 4 -->
                 <div class="card-buku">
                     <div class="cover-container">
                         <img src="images/seri-literasi-anak-indonesia.png" alt="Cover Buku Seri Literasi Anak Indonesia" class="cover-image">
@@ -657,6 +733,7 @@
                         <div class="badge-status">Dalam Proses Pengembangan</div>
                     </div>
                 </div>
+                <!-- Buku 5 -->
                 <div class="card-buku">
                     <div class="cover-container">
                         <img src="images/worksheet-edukatif-anak.png" alt="Cover Worksheet Edukatif Anak" class="cover-image">
@@ -671,12 +748,14 @@
                 </div>
             </div>
 
+            <!-- CATATAN PENERBIT -->
             <div class="catatan-penerbit">
                 <p>Halaman ini merupakan pusat informasi publikasi PT ONDO MULANA SUKSES. Setiap buku yang diterbitkan dan didaftarkan ISBN akan ditampilkan pada halaman ini sebagai arsip dan akses publikasi resmi perusahaan.</p>
             </div>
         </div>
     </section>
 
+    <!-- 5. KONTAK -->
     <section id="kontak">
         <div class="container">
             <h2 class="section-title">Kontak Perusahaan</h2>
@@ -695,29 +774,22 @@
                     </div>
                     <div class="kontak-item">
                         <strong>Nomor WhatsApp Resmi:</strong>
-                        081361523887
+                        <a href="https://wa.me/6281361523887?text=Halo%20PT%20ONDO%20MULANA%20SUKSES%2C%20saya%20ingin%20mendapatkan%20informasi%20lebih%20lanjut." target="_blank" rel="noopener noreferrer">081361523887</a>
                     </div>
                     <div class="kontak-item">
                         <strong>Alamat Surat Elektronik (E-mail):</strong>
-                        ondomulanasukses@gmail.com
+                        <a href="mailto:ondomulanasukses@gmail.com?subject=Pertanyaan%20PT%20ONDO%20MULANA%20SUKSES">ondomulanasukses@gmail.com</a>
                     </div>
                     <div class="kontak-item">
                         <strong>Jam Operasional Kantor:</strong>
                         Senin - Jumat | Pukul 08.00 - 16.00 WIB
                     </div>
                 </div>
-                <div class="kontak-peta">
-                    <h3>Lokasi Perusahaan</h3>
-                    <div class="peta-lokasi">
-                        <strong>Kota Padangsidimpuan</strong><br>
-                        Sumatera Utara<br>
-                        Indonesia
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer>
         <div class="container">
             <p>&copy; 2026 PT ONDO MULANA SUKSES. Seluruh Hak Cipta Dilindungi Undang-Undang.</p>
